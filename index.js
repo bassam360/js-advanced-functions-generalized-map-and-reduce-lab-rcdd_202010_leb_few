@@ -1,21 +1,21 @@
 // Add your functions here
-function map(src, cb) {
-  let r = []
+function map(sr, cb) {
+  let x = []
 
-  for (let i = 0; i < src.length; i++) {
-    let theElement = src[i]
-    r.push(cb(theElement))
+  for (let i = 0; i < sr.length; i++) {
+    let theElement = sr[i]
+    x.push(cb(theElement))
   }
 
-  return r;
+  return x;
 }
 
-function reduce(src, cb, starting){
-  let r = (!!starting) ? starting : src[0]
-  let i = (!!starting) ? 0 : 1
+function reduce(sr, cb, start){
+  let x = (!!start) ? start : src[0]
+  let i = (!!start) ? 0 : 1
 
-  for (; i < src.length; i++) {
-    r = cb(src[i], r)
+  for (i=0; i < sr.length; i++) {
+    r = cb(sr[i], r)
   }
 
   return r;
